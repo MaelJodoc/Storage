@@ -1,4 +1,4 @@
-package com.example.Storage;
+package com.example.storage;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
