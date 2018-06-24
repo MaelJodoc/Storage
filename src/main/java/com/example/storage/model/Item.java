@@ -10,11 +10,9 @@ import java.util.List;
  */
 @Entity
 @Table(name = "item")
-public class Item extends AbstractPersistable<Long> {
+public class Item extends AbstractPersistable<Integer> {
     @Column(name = "name", length = 100)
     private String name;
-    @Column(name = "manufacturer", length = 50)
-    private String manufacturer;
     @Column(name = "custom_code", length = 50)
     private String customCode;
     @Column(name = "mmk_code", length = 50)
@@ -31,6 +29,14 @@ public class Item extends AbstractPersistable<Long> {
     private int manyUnits;
     @Column(name = "description")
     private String description;
+
+    @ManyToOne
+    @JoinColumn(name = "manufacturer_id")
+    private Manufacturer manufacturer;
+
+    @ManyToOne
+    @JoinColumn(name = "type_id")
+    private Type type;
 
     @OneToMany(mappedBy = "item")
     private List<RackAssociation> rackAssociations;

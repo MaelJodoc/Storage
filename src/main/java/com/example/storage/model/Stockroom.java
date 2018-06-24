@@ -13,7 +13,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "stockroom")
-public class Stockroom extends AbstractPersistable<Long> {
+public class Stockroom extends AbstractPersistable<Integer> {
     @Column(name = "name")
     private String name;
     @Column(name = "description")

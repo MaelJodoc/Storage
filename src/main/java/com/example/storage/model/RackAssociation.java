@@ -9,7 +9,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "rack_item")
-public class RackAssociation extends AbstractPersistable<Long> {
+public class RackAssociation extends AbstractPersistable<Integer> {
     @Column(name = "quantity")
     private int quantity;
 
