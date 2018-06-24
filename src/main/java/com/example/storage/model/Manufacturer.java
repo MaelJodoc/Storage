@@ -11,7 +11,7 @@ import java.util.List;
 @Entity
 @Table(name = "manufacturer")
 public class Manufacturer extends AbstractPersistable<Integer> {
-    @Column(name = "name", length = 100)
+    @Column(name = "name", length = 100, unique = true, nullable = false)
     private String name;
     @Column(name = "site", length = 200)
     private String site;
