@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS TYPE;
 CREATE TABLE TYPE
 (
   ID   int AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  NAME varchar(100) unique            not null,
+  NAME varchar(100) unique            not null
 );
 
 
